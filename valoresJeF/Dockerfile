@@ -5,8 +5,8 @@ FROM maven:3.9.6-eclipse-temurin-21 AS build
 WORKDIR /app
 
 # Copia os arquivos do projeto
-COPY jogoVivi/pom.xml .
-COPY jogoVivi/src ./src
+COPY valoresJeF/pom.xml .
+COPY valoresJeF/src ./src
 
 # Compila o projeto
 RUN mvn clean package -DskipTests
