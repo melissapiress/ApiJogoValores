@@ -1,4 +1,4 @@
-# Usa Maven com Java 21
+# Usa Maven com Java 23
 FROM maven:3.9.6-eclipse-temurin-21 AS build
 
 # Define o diretório de trabalho
@@ -12,7 +12,7 @@ COPY valoresJeF/src ./src
 RUN mvn clean package -DskipTests
 
 # Cria a imagem final com apenas o JAR
-FROM eclipse-temurin:21-jdk
+FROM eclipse-temurin:23-jdk
 
 WORKDIR /app
 
