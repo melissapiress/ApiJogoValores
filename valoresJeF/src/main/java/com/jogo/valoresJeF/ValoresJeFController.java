@@ -18,7 +18,7 @@ public class ValoresJeFController {
     @Autowired
     private ValoresJeFService valoresService;
     @PostMapping("/cadastroUser")
-    @CrossOrigin("http://127.0.0.1:5501")
+    @CrossOrigin("https://jogovalores-e3h7.onrender.com/")
     public ResponseEntity<String> saveUser(@RequestBody ValoresJeFModel valoresModel){
         return new ResponseEntity(valoresService.save(valoresModel), HttpStatus.OK);
     }
