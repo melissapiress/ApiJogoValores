@@ -20,7 +20,7 @@ public class ValoresJeFController {
     @PostMapping("/cadastroUser")
     @CrossOrigin("https://jogovalores-e3h7.onrender.com/")
     public ResponseEntity<String> saveUser(@RequestBody ValoresJeFModel valoresModel){
-        return new ResponseEntity(valoresService.save(valoresModel), HttpStatus.OK);
+        return new ResponseEntity(valoresService.save(valoresModel), HttpStatus.CREATED);
     }
     @GetMapping("/getUsers")
     public List<ValoresJeFModel> getAllUsers() {
